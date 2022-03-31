@@ -18,7 +18,7 @@ embedded_instances {
   "  }\n"
   "}\n"
   "embedded_components {\n"
-  "  id: \"main\"\n"
+  "  id: \"Level_1\"\n"
   "  type: \"collectionproxy\"\n"
   "  data: \"collection: \\\"/game/game.collection\\\"\\n"
   "exclude: false\\n"

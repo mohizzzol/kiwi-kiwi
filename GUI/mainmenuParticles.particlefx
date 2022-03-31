@@ -1,18 +1,18 @@
 emitters {
   id: "leaves"
   mode: PLAY_MODE_LOOP
-  duration: 1.0
+  duration: 0.0
   space: EMISSION_SPACE_EMITTER
   position {
-    x: 0.0
+    x: -1.0
     y: 0.0
     z: 0.0
   }
   rotation {
     x: 0.0
     y: 0.0
-    z: 0.0
-    w: 1.0
+    z: 0.70710677
+    w: -0.70710677
   }
   tile_source: "/assets/leaves.atlas"
   animation: "leaves"
@@ -20,14 +20,14 @@ emitters {
   blend_mode: BLEND_MODE_ADD_ALPHA
   particle_orientation: PARTICLE_ORIENTATION_MOVEMENT_DIRECTION
   inherit_velocity: 0.2
-  max_particle_count: 12600
-  type: EMITTER_TYPE_SPHERE
+  max_particle_count: 5120
+  type: EMITTER_TYPE_CONE
   start_delay: 0.0
   properties {
     key: EMITTER_KEY_SPAWN_RATE
     points {
       x: 0.0
-      y: 5.0
+      y: 2.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -73,7 +73,7 @@ emitters {
     key: EMITTER_KEY_PARTICLE_LIFE_TIME
     points {
       x: 0.0
-      y: 2.5
+      y: 15.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -294,8 +294,8 @@ modifiers {
   type: MODIFIER_TYPE_VORTEX
   use_direction: 0
   position {
-    x: -27.0
-    y: 64.0
+    x: 54.0
+    y: 30.0
     z: 0.0
   }
   rotation {
@@ -318,7 +318,7 @@ modifiers {
     key: MODIFIER_KEY_MAX_DISTANCE
     points {
       x: 0.0
-      y: 1000.0
+      y: 40.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -329,8 +329,8 @@ modifiers {
   type: MODIFIER_TYPE_VORTEX
   use_direction: 0
   position {
-    x: 112.0
-    y: -16.0
+    x: 117.0
+    y: 2.0
     z: 0.0
   }
   rotation {
@@ -353,7 +353,32 @@ modifiers {
     key: MODIFIER_KEY_MAX_DISTANCE
     points {
       x: 0.0
-      y: 1000.0
+      y: 20.0
+      t_x: 1.0
+      t_y: 0.0
+    }
+    spread: 0.0
+  }
+}
+modifiers {
+  type: MODIFIER_TYPE_DRAG
+  use_direction: 0
+  position {
+    x: 56.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  properties {
+    key: MODIFIER_KEY_MAGNITUDE
+    points {
+      x: 0.0
+      y: 0.1
       t_x: 1.0
       t_y: 0.0
     }
