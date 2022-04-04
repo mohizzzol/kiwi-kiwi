@@ -1,0 +1,16 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+
+end
+function update(self)
+	--local particles_node = gui.get_node("particleleaves")
+	--gui.play_particlefx(particles_node)
+end
+function on_input(self, action_id, action)
+	if(action_id == hash("touch") and action.released == true) then
+		local textExit = gui.get_node("backButton")
+		if(gui.pick_node(textExit,action.x,action.y)) then
+			msg.post("loader:/go#loader", "go_back")
+		end
+	end
+end

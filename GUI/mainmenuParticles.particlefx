@@ -20,7 +20,7 @@ emitters {
   blend_mode: BLEND_MODE_ADD_ALPHA
   particle_orientation: PARTICLE_ORIENTATION_MOVEMENT_DIRECTION
   inherit_velocity: 0.2
-  max_particle_count: 5120
+  max_particle_count: 1024
   type: EMITTER_TYPE_CONE
   start_delay: 0.0
   properties {
