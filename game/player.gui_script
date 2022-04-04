@@ -1,0 +1,9 @@
+function update(self)
+	if player_health == 5 then
+		local n = gui.get_node("heart_3")
+		gui.set_texture(n, "player")
+		gui.play_flipbook(n, "half_heart")
+		--gui.set_texture(heart_2, "full heart")
+		--gui.set_texture(heart_2, "half heart")
+	end
+end

@@ -1,19 +1,19 @@
 [project]
 title = kiwi kiwi
 developer = isaac worsencoft
-publisher = IZE software 
+publisher = IZE software
 
 [bootstrap]
 main_collection = /Loader/loader.collectionc
 
 [input]
-game_binding = /input/game.input_bindingc
+game_binding = /GUI/input/game.input_bindingc
 use_accelerometer = 0
 
 [display]
-width = 960
-height = 640
-display_device_info = 1
+display_device_info = 0
+update_frequency = 420
+high_dpi = 0
 
 [ios]
 app_icon_57x57 = /assets/app_icons/icon_57.png
@@ -34,4 +34,7 @@ shared_state = 1
 [physics]
 gravity_y = -1000.0
 scale = 0.01
+
+[shader]
+output_spirv = 1
 

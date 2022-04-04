@@ -1,3 +1,4 @@
+
 local function load_menu(self)
 	msg.post("go#mainmenu", "load")
 	msg.post("go#mainmenu", "enable")
@@ -5,10 +6,18 @@ end
 local function unload_menu(self)
 	msg.post("go#mainmenu","unload")
 end
-local function load_main(self)
+function unload_screen(self,receiver)
+	msg.post(receiver, "unload")
+end
+local function load_first_level(self)
 	msg.post("go#Level_1", "load")
 	msg.post("go#Level_1", "enable")
 end
+local function load_settings_menu(self)
+	msg.post("go#settings", "load")
+	msg.post("go#settings", "enable")
+end
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	load_menu(self)
@@ -16,6 +25,14 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("start_game") then
 		unload_menu(self)
-		load_main(self)
+		load_first_level(self)
+	end
+	if message_id == hash("open_settings") then
+		unload_menu(self)
+		load_settings_menu(self)
+	end
+	if message_id == hash("go_back") then	
+		unload_screen(self,"go#settings")
+		load_menu(self)
 	end
 end

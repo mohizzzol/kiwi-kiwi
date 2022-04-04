@@ -30,6 +30,7 @@ embedded_instances {
   "mask: \\\"ground\\\"\\n"
   "mask: \\\"danger\\\"\\n"
   "mask: \\\"gobj\\\"\\n"
+  "mask: \\\"levelPro\\\"\\n"
   "embedded_collision_shape {\\n"
   "  shapes {\\n"
   "    shape_type: TYPE_SPHERE\\n"
@@ -89,7 +90,7 @@ embedded_instances {
   ""
   position {
     x: 0.0
-    y: -107.0
+    y: -66.0
     z: 0.0
   }
   rotation {
@@ -110,7 +111,7 @@ embedded_instances {
   "  id: \"camera\"\n"
   "  type: \"camera\"\n"
   "  data: \"aspect_ratio: 1.0\\n"
-  "fov: 0.7854\\n"
+  "fov: 0.6\\n"
   "near_z: 0.1\\n"
   "far_z: 1000.0\\n"
   "auto_aspect_ratio: 0\\n"
@@ -131,6 +132,41 @@ embedded_instances {
   position {
     x: -480.0
     y: -320.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "health"
+  data: "components {\n"
+  "  id: \"settings\"\n"
+  "  component: \"/game/player.gui\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -459.0
+    y: -98.0
     z: 0.0
   }
   rotation {
